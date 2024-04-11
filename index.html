@@ -3,12 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>2-D Art &amp; Design Portfolio</title>
+    <title>Art Portfolio</title>
 
     <!--mobile optimization-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!--materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,195 +20,50 @@
         @import url('https://fonts.googleapis.com/css2?family=Kalnia&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Changa+One&family=Rubik+Marker+Hatch&display=swap');
     </style>
 
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
+        
     </script>
 </head>
 
-<body>
-    <nav>
-    </nav>
+<!--colors: #F9C0CD #F9D0C0 #F9ECC0 #CDF9C0 #C0F9ED #C0CDF9 #D0C0F9 // #EAF9C0 #CDF9C0 #C0F9D0-->
 
-    <div class="row" id="container">
+<body>
+    <div class="header">
+        <h1>Reese Hausman</h1>
+        <ul>
+            <li>
+                <a id="linkedin" href="https://www.linkedin.com/in/reese-hausman/">LinkedIn</a>
+            </li>
+            <li>
+                <a id="itchio" href="https://reeserocks.itch.io">itch.io</a>
+            </li>
+            <li>
+                <a id="youtube" href="https://www.youtube.com/c/reekrockk">YouTube</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
         <!--left-->
-        <div class="col l4">
-            <h1>Reese Hausman</h1>
-            <ul>
-                <li>
-                    <a class="links" style="color: #F9C0CD" href="https://www.linkedin.com/in/reese-hausman/">LinkedIn</a>
-                </li>
-                <li>
-                    <a class="links" style="color: #F9D0C0" href="https://reeserocks.itch.io">itch.io</a>
-                </li>
-                <li>
-                    <a class="links" style="color: #F9ECC0" href="https://www.youtube.com/c/reekrockk">YouTube</a>
-                </li>
-                
-                <!--more colors: #EAF9C0 #CDF9C0 #C0F9D0-->
-            </ul>
+        <div class="leftTitle">
+            <img src="images/2.jpg" alt="self portrait" id="aboutme">
+            <h2>About Me</h2>
+        </div>  
+        <div class="bio">
+            <p>Hey there! My name is Reese Hausman and I'm looking to become a Game Artist. My specialty is 2D digital illustrations, though I have experience in traditional art, animation, and 3D sculpting/modeling. I am currently a Games + Simulation student at Miami University in Oxford, Ohio where I am honing my skills in game design, programming, and studio art.</p>
         </div>
+        <div class="button1">illustrations</div>
+        <div class="button2">games</div>
+        <div class="button3">3d renders</div>
+        <div class="button4">animation</div>
 
         <!--right-->
-        <div class="col l8">
-            <!--TITLE-->
-            <div class="row" style="text-align: center">
-                <h2>Best of Academic Art 2021-2023</h2>
-                <hr>
-                <br>
-            </div>
-
-            <!--SLIDESHOW-->
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 15</div>
-                    <img src="images/1.jpg">
-                    <div class="text">How do we reconcile with death? &#124;&#124; September 2022 &#124;&#124; Oil on canvas paper &#124;&#124; 20.5" x 16"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 15</div>
-                    <img src="images/2.jpg">
-                    <div class="text">Who am I? &#124;&#124; November 2022 &#124;&#124; Colored pencil on paper &#124;&#124; 18" x 17"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 15</div>
-                    <img src="images/3.JPG">
-                    <div class="text">Drapery Study &#124;&#124; October 2021 &#124;&#124; Oil on canvas paper &#124;&#124; 24" x 18"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 15</div>
-                    <img src="images/4.jpg">
-                    <div class="text">Still Life: Sight Size &amp; Glazing &#124;&#124; January 2022 &#124;&#124; Graphite / Oil &#124;&#124; 8" x 12" / 18" x 24"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 15</div>
-                    <img src="images/5.png">
-                    <div class="text">How do we value time? &#124;&#124; December 2022 &#124;&#124; Digital - Procreate &#124;&#124; 1679px x 1371px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">6 / 15</div>
-                    <img src="images/6.jpg">
-                    <div class="text">Does taking life make us less human? &#124;&#124; December 2022 &#124;&#124; Digital - Procreate &#124;&#124; 1668px x 2224px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">7 / 15</div>
-                    <img src="images/7.jpg">
-                    <div class="text">Are emotions learned or inherent? &#124;&#124; November 2022 &#124;&#124; Mixed media &#124;&#124; 2531px x 2616px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">8 / 15</div>
-                    <img src="images/8.png">
-                    <div class="text">Master Portrait after <i>Victorine Meurend</i> &#124;&#124; January 2022 &#124;&#124; Oil on canvas paper &#124;&#124; 16" x 18"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">9 / 15</div>
-                    <img src="images/9.png">
-                    <div class="text">Basic Shapes &#124;&#124; October 2021 &#124;&#124; Oil on canvas paper &#124;&#124; 24" x 18"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">10 / 15</div>
-                    <img src="images/10.JPG">
-                    <div class="text">Is there more to life than we know? &#124;&#124; December 2022 &#124;&#124; Mixed media &#124;&#124; 19" x 18"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">11 / 15</div>
-                    <img src="images/11.png">
-                    <div class="text">What makes you special? &#124;&#124; March 2023 &#124;&#124; Digital - Clip Studio Paint &#124;&#124; 1450px x 1600px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">12 / 15</div>
-                    <img src="images/12.png">
-                    <div class="text">What is the conscious mind? &#124;&#124; February 2023 &#124;&#124; Digital - Procreate &#124;&#124; 1393px x 1243px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">13 / 15</div>
-                    <img src="images/13.JPG">
-                    <div class="text">Observational Sketchbook &#124;&#124; September 2022 &#124;&#124; Graphite on paper &#124;&#124; 8" x 12"</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">14 / 15</div>
-                    <img src="images/14.jpg">
-                    <div class="text">How do fleeting moments create lasting memories? &#124;&#124; February 2023 &#124;&#124; Digital - Procreate &#124;&#124; 2224px x 1668px</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">15 / 15</div>
-                    <img src="images/15.jpg">
-                    <div class="text">Is there a god who knows us? &#124;&#124; September 2022 &#124;&#124; Digital - Procreate &#124;&#124; 1668px x 2224px</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
-                <span class="dot" onclick="currentSlide(10)"></span>
-                <span class="dot" onclick="currentSlide(11)"></span>
-                <span class="dot" onclick="currentSlide(12)"></span>
-                <span class="dot" onclick="currentSlide(13)"></span>
-                <span class="dot" onclick="currentSlide(14)"></span>
-                <span class="dot" onclick="currentSlide(15)"></span>
-            </div>
-        </div>
+        <div class="images"></div>
+        
+        <div class="footer"></div>
     </div>
-</body></html>
+</body>
+</html>
